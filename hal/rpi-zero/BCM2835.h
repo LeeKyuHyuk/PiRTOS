@@ -1,0 +1,6 @@
+#ifndef HAL_RPI_ZERO_BCM2835_H_
+#define HAL_RPI_ZERO_BCM2835_H_
+
+#define MMIO_BASE 0x20000000
+
+#endif /* HAL_RPI_ZERO_BCM2835_H_ */

@@ -1,0 +1,902 @@
+#ifndef HAL_RPI_ZERO_GPIO_H_
+#define HAL_RPI_ZERO_GPIO_H_
+
+typedef union GPFSEL0_t {
+  uint32_t all;
+  struct {
+    uint32_t FSEL0 : 3;    // 2:0
+    uint32_t FSEL1 : 3;    // 5:3
+    uint32_t FSEL2 : 3;    // 8:6
+    uint32_t FSEL3 : 3;    // 11:9
+    uint32_t FSEL4 : 3;    // 14:12
+    uint32_t FSEL5 : 3;    // 17:15
+    uint32_t FSEL6 : 3;    // 20:18
+    uint32_t FSEL7 : 3;    // 23:21
+    uint32_t FSEL8 : 3;    // 26:24
+    uint32_t FSEL9 : 3;    // 29:27
+    uint32_t reserved : 2; // 31:30
+  } bits;
+} GPFSEL0_t;
+
+typedef union GPFSEL1_t {
+  uint32_t all;
+  struct {
+    uint32_t FSEL10 : 3;    // 2:0
+    uint32_t FSEL11 : 3;    // 5:3
+    uint32_t FSEL12 : 3;    // 8:6
+    uint32_t FSEL13 : 3;    // 11:9
+    uint32_t FSEL14 : 3;    // 14:12
+    uint32_t FSEL15 : 3;    // 17:15
+    uint32_t FSEL16 : 3;    // 20:18
+    uint32_t FSEL17 : 3;    // 23:21
+    uint32_t FSEL18 : 3;    // 26:24
+    uint32_t FSEL19 : 3;    // 29:27
+    uint32_t reserved : 2; // 31:30
+  } bits;
+} GPFSEL1_t;
+
+typedef union GPFSEL2_t {
+  uint32_t all;
+  struct {
+    uint32_t FSEL20 : 3;    // 2:0
+    uint32_t FSEL21 : 3;    // 5:3
+    uint32_t FSEL22 : 3;    // 8:6
+    uint32_t FSEL23 : 3;    // 11:9
+    uint32_t FSEL24 : 3;    // 14:12
+    uint32_t FSEL25 : 3;    // 17:15
+    uint32_t FSEL26 : 3;    // 20:18
+    uint32_t FSEL27 : 3;    // 23:21
+    uint32_t FSEL28 : 3;    // 26:24
+    uint32_t FSEL29 : 3;    // 29:27
+    uint32_t reserved : 2; // 31:30
+  } bits;
+} GPFSEL2_t;
+
+typedef union GPFSEL3_t {
+  uint32_t all;
+  struct {
+    uint32_t FSEL30 : 3;    // 2:0
+    uint32_t FSEL31 : 3;    // 5:3
+    uint32_t FSEL32 : 3;    // 8:6
+    uint32_t FSEL33 : 3;    // 11:9
+    uint32_t FSEL34 : 3;    // 14:12
+    uint32_t FSEL35 : 3;    // 17:15
+    uint32_t FSEL36 : 3;    // 20:18
+    uint32_t FSEL37 : 3;    // 23:21
+    uint32_t FSEL38 : 3;    // 26:24
+    uint32_t FSEL39 : 3;    // 29:27
+    uint32_t reserved : 2; // 31:30
+  } bits;
+} GPFSEL3_t;
+
+typedef union GPFSEL4_t {
+  uint32_t all;
+  struct {
+    uint32_t FSEL40 : 3;    // 2:0
+    uint32_t FSEL41 : 3;    // 5:3
+    uint32_t FSEL42 : 3;    // 8:6
+    uint32_t FSEL43 : 3;    // 11:9
+    uint32_t FSEL44 : 3;    // 14:12
+    uint32_t FSEL45 : 3;    // 17:15
+    uint32_t FSEL46 : 3;    // 20:18
+    uint32_t FSEL47 : 3;    // 23:21
+    uint32_t FSEL48 : 3;    // 26:24
+    uint32_t FSEL49 : 3;    // 29:27
+    uint32_t reserved : 2; // 31:30
+  } bits;
+} GPFSEL4_t;
+
+typedef union GPFSEL5_t {
+  uint32_t all;
+  struct {
+    uint32_t FSEL50 : 3;    // 2:0
+    uint32_t FSEL51 : 3;    // 5:3
+    uint32_t FSEL52 : 3;    // 8:6
+    uint32_t FSEL53 : 3;    // 11:9
+    uint32_t reserved : 20; // 31:12
+  } bits;
+} GPFSEL5_t;
+
+typedef union GPSET0_t {
+  uint32_t all;
+  struct {
+    uint32_t SET0 : 1;      // 0
+    uint32_t SET1 : 1;      // 1
+    uint32_t SET2 : 1;      // 2
+    uint32_t SET3 : 1;      // 3
+    uint32_t SET4 : 1;      // 4
+    uint32_t SET5 : 1;      // 5
+    uint32_t SET6 : 1;      // 6
+    uint32_t SET7 : 1;      // 7
+    uint32_t SET8 : 1;      // 8
+    uint32_t SET9 : 1;      // 9
+    uint32_t SET10 : 1;     // 10
+    uint32_t SET11 : 1;     // 11
+    uint32_t SET12 : 1;     // 12
+    uint32_t SET13 : 1;     // 13
+    uint32_t SET14 : 1;     // 14
+    uint32_t SET15 : 1;     // 15
+    uint32_t SET16 : 1;     // 16
+    uint32_t SET17 : 1;     // 17
+    uint32_t SET18 : 1;     // 18
+    uint32_t SET19 : 1;     // 19
+    uint32_t SET20 : 1;     // 20
+    uint32_t SET21 : 1;     // 21
+    uint32_t SET22 : 1;     // 22
+    uint32_t SET23 : 1;     // 23
+    uint32_t SET24 : 1;     // 24
+    uint32_t SET25 : 1;     // 25
+    uint32_t SET26 : 1;     // 26
+    uint32_t SET27 : 1;     // 27
+    uint32_t SET28 : 1;     // 28
+    uint32_t SET29 : 1;     // 29
+    uint32_t SET30 : 1;     // 30
+    uint32_t SET31 : 1;     // 31
+    uint32_t reserved : 20; // 31:12
+  } bits;
+} GPSET0_t;
+
+typedef union GPSET1_t {
+  uint32_t all;
+  struct {
+    uint32_t SET32 : 1;     // 0
+    uint32_t SET33 : 1;     // 1
+    uint32_t SET34 : 1;     // 2
+    uint32_t SET35 : 1;     // 3
+    uint32_t SET36 : 1;     // 4
+    uint32_t SET37 : 1;     // 5
+    uint32_t SET38 : 1;     // 6
+    uint32_t SET39 : 1;     // 7
+    uint32_t SET40 : 1;     // 8
+    uint32_t SET41 : 1;     // 9
+    uint32_t SET42 : 1;     // 10
+    uint32_t SET43 : 1;     // 11
+    uint32_t SET44 : 1;     // 12
+    uint32_t SET45 : 1;     // 13
+    uint32_t SET46 : 1;     // 14
+    uint32_t SET47 : 1;     // 15
+    uint32_t SET48 : 1;     // 16
+    uint32_t SET49 : 1;     // 17
+    uint32_t SET50 : 1;     // 18
+    uint32_t SET51 : 1;     // 19
+    uint32_t SET52 : 1;     // 20
+    uint32_t SET53 : 1;     // 21
+    uint32_t reserved : 10; // 31:22
+  } bits;
+} GPSET1_t;
+
+typedef union GPCLR0_t {
+  uint32_t all;
+  struct {
+    uint32_t CLR0 : 1;      // 0
+    uint32_t CLR1 : 1;      // 1
+    uint32_t CLR2 : 1;      // 2
+    uint32_t CLR3 : 1;      // 3
+    uint32_t CLR4 : 1;      // 4
+    uint32_t CLR5 : 1;      // 5
+    uint32_t CLR6 : 1;      // 6
+    uint32_t CLR7 : 1;      // 7
+    uint32_t CLR8 : 1;      // 8
+    uint32_t CLR9 : 1;      // 9
+    uint32_t CLR10 : 1;     // 10
+    uint32_t CLR11 : 1;     // 11
+    uint32_t CLR12 : 1;     // 12
+    uint32_t CLR13 : 1;     // 13
+    uint32_t CLR14 : 1;     // 14
+    uint32_t CLR15 : 1;     // 15
+    uint32_t CLR16 : 1;     // 16
+    uint32_t CLR17 : 1;     // 17
+    uint32_t CLR18 : 1;     // 18
+    uint32_t CLR19 : 1;     // 19
+    uint32_t CLR20 : 1;     // 20
+    uint32_t CLR21 : 1;     // 21
+    uint32_t CLR22 : 1;     // 22
+    uint32_t CLR23 : 1;     // 23
+    uint32_t CLR24 : 1;     // 24
+    uint32_t CLR25 : 1;     // 25
+    uint32_t CLR26 : 1;     // 26
+    uint32_t CLR27 : 1;     // 27
+    uint32_t CLR28 : 1;     // 28
+    uint32_t CLR29 : 1;     // 29
+    uint32_t CLR30 : 1;     // 30
+    uint32_t CLR31 : 1;     // 31
+    uint32_t reserved : 20; // 31:12
+  } bits;
+} GPCLR0_t;
+
+typedef union GPCLR1_t {
+  uint32_t all;
+  struct {
+    uint32_t CLR32 : 1;     // 0
+    uint32_t CLR33 : 1;     // 1
+    uint32_t CLR34 : 1;     // 2
+    uint32_t CLR35 : 1;     // 3
+    uint32_t CLR36 : 1;     // 4
+    uint32_t CLR37 : 1;     // 5
+    uint32_t CLR38 : 1;     // 6
+    uint32_t CLR39 : 1;     // 7
+    uint32_t CLR40 : 1;     // 8
+    uint32_t CLR41 : 1;     // 9
+    uint32_t CLR42 : 1;     // 10
+    uint32_t CLR43 : 1;     // 11
+    uint32_t CLR44 : 1;     // 12
+    uint32_t CLR45 : 1;     // 13
+    uint32_t CLR46 : 1;     // 14
+    uint32_t CLR47 : 1;     // 15
+    uint32_t CLR48 : 1;     // 16
+    uint32_t CLR49 : 1;     // 17
+    uint32_t CLR50 : 1;     // 18
+    uint32_t CLR51 : 1;     // 19
+    uint32_t CLR52 : 1;     // 20
+    uint32_t CLR53 : 1;     // 21
+    uint32_t reserved : 10; // 31:22
+  } bits;
+} GPCLR1_t;
+
+typedef union GPLEV0_t {
+  uint32_t all;
+  struct {
+    uint32_t LEV0 : 1;      // 0
+    uint32_t LEV1 : 1;      // 1
+    uint32_t LEV2 : 1;      // 2
+    uint32_t LEV3 : 1;      // 3
+    uint32_t LEV4 : 1;      // 4
+    uint32_t LEV5 : 1;      // 5
+    uint32_t LEV6 : 1;      // 6
+    uint32_t LEV7 : 1;      // 7
+    uint32_t LEV8 : 1;      // 8
+    uint32_t LEV9 : 1;      // 9
+    uint32_t LEV10 : 1;     // 10
+    uint32_t LEV11 : 1;     // 11
+    uint32_t LEV12 : 1;     // 12
+    uint32_t LEV13 : 1;     // 13
+    uint32_t LEV14 : 1;     // 14
+    uint32_t LEV15 : 1;     // 15
+    uint32_t LEV16 : 1;     // 16
+    uint32_t LEV17 : 1;     // 17
+    uint32_t LEV18 : 1;     // 18
+    uint32_t LEV19 : 1;     // 19
+    uint32_t LEV20 : 1;     // 20
+    uint32_t LEV21 : 1;     // 21
+    uint32_t LEV22 : 1;     // 22
+    uint32_t LEV23 : 1;     // 23
+    uint32_t LEV24 : 1;     // 24
+    uint32_t LEV25 : 1;     // 25
+    uint32_t LEV26 : 1;     // 26
+    uint32_t LEV27 : 1;     // 27
+    uint32_t LEV28 : 1;     // 28
+    uint32_t LEV29 : 1;     // 29
+    uint32_t LEV30 : 1;     // 30
+    uint32_t LEV31 : 1;     // 31
+    uint32_t reserved : 20; // 31:12
+  } bits;
+} GPLEV0_t;
+
+typedef union GPLEV1_t {
+  uint32_t all;
+  struct {
+    uint32_t LEV32 : 1;     // 0
+    uint32_t LEV33 : 1;     // 1
+    uint32_t LEV34 : 1;     // 2
+    uint32_t LEV35 : 1;     // 3
+    uint32_t LEV36 : 1;     // 4
+    uint32_t LEV37 : 1;     // 5
+    uint32_t LEV38 : 1;     // 6
+    uint32_t LEV39 : 1;     // 7
+    uint32_t LEV40 : 1;     // 8
+    uint32_t LEV41 : 1;     // 9
+    uint32_t LEV42 : 1;     // 10
+    uint32_t LEV43 : 1;     // 11
+    uint32_t LEV44 : 1;     // 12
+    uint32_t LEV45 : 1;     // 13
+    uint32_t LEV46 : 1;     // 14
+    uint32_t LEV47 : 1;     // 15
+    uint32_t LEV48 : 1;     // 16
+    uint32_t LEV49 : 1;     // 17
+    uint32_t LEV50 : 1;     // 18
+    uint32_t LEV51 : 1;     // 19
+    uint32_t LEV52 : 1;     // 20
+    uint32_t LEV53 : 1;     // 21
+    uint32_t reserved : 10; // 31:22
+  } bits;
+} GPLEV1_t;
+
+typedef union GPEDS0_t {
+  uint32_t all;
+  struct {
+    uint32_t EDS0 : 1;      // 0
+    uint32_t EDS1 : 1;      // 1
+    uint32_t EDS2 : 1;      // 2
+    uint32_t EDS3 : 1;      // 3
+    uint32_t EDS4 : 1;      // 4
+    uint32_t EDS5 : 1;      // 5
+    uint32_t EDS6 : 1;      // 6
+    uint32_t EDS7 : 1;      // 7
+    uint32_t EDS8 : 1;      // 8
+    uint32_t EDS9 : 1;      // 9
+    uint32_t EDS10 : 1;     // 10
+    uint32_t EDS11 : 1;     // 11
+    uint32_t EDS12 : 1;     // 12
+    uint32_t EDS13 : 1;     // 13
+    uint32_t EDS14 : 1;     // 14
+    uint32_t EDS15 : 1;     // 15
+    uint32_t EDS16 : 1;     // 16
+    uint32_t EDS17 : 1;     // 17
+    uint32_t EDS18 : 1;     // 18
+    uint32_t EDS19 : 1;     // 19
+    uint32_t EDS20 : 1;     // 20
+    uint32_t EDS21 : 1;     // 21
+    uint32_t EDS22 : 1;     // 22
+    uint32_t EDS23 : 1;     // 23
+    uint32_t EDS24 : 1;     // 24
+    uint32_t EDS25 : 1;     // 25
+    uint32_t EDS26 : 1;     // 26
+    uint32_t EDS27 : 1;     // 27
+    uint32_t EDS28 : 1;     // 28
+    uint32_t EDS29 : 1;     // 29
+    uint32_t EDS30 : 1;     // 30
+    uint32_t EDS31 : 1;     // 31
+    uint32_t reserved : 20; // 31:12
+  } bits;
+} GPEDS0_t;
+
+typedef union GPEDS1_t {
+  uint32_t all;
+  struct {
+    uint32_t EDS32 : 1;     // 0
+    uint32_t EDS33 : 1;     // 1
+    uint32_t EDS34 : 1;     // 2
+    uint32_t EDS35 : 1;     // 3
+    uint32_t EDS36 : 1;     // 4
+    uint32_t EDS37 : 1;     // 5
+    uint32_t EDS38 : 1;     // 6
+    uint32_t EDS39 : 1;     // 7
+    uint32_t EDS40 : 1;     // 8
+    uint32_t EDS41 : 1;     // 9
+    uint32_t EDS42 : 1;     // 10
+    uint32_t EDS43 : 1;     // 11
+    uint32_t EDS44 : 1;     // 12
+    uint32_t EDS45 : 1;     // 13
+    uint32_t EDS46 : 1;     // 14
+    uint32_t EDS47 : 1;     // 15
+    uint32_t EDS48 : 1;     // 16
+    uint32_t EDS49 : 1;     // 17
+    uint32_t EDS50 : 1;     // 18
+    uint32_t EDS51 : 1;     // 19
+    uint32_t EDS52 : 1;     // 20
+    uint32_t EDS53 : 1;     // 21
+    uint32_t reserved : 10; // 31:22
+  } bits;
+} GPEDS1_t;
+
+typedef union GPREN0_t {
+  uint32_t all;
+  struct {
+    uint32_t REN0 : 1;      // 0
+    uint32_t REN1 : 1;      // 1
+    uint32_t REN2 : 1;      // 2
+    uint32_t REN3 : 1;      // 3
+    uint32_t REN4 : 1;      // 4
+    uint32_t REN5 : 1;      // 5
+    uint32_t REN6 : 1;      // 6
+    uint32_t REN7 : 1;      // 7
+    uint32_t REN8 : 1;      // 8
+    uint32_t REN9 : 1;      // 9
+    uint32_t REN10 : 1;     // 10
+    uint32_t REN11 : 1;     // 11
+    uint32_t REN12 : 1;     // 12
+    uint32_t REN13 : 1;     // 13
+    uint32_t REN14 : 1;     // 14
+    uint32_t REN15 : 1;     // 15
+    uint32_t REN16 : 1;     // 16
+    uint32_t REN17 : 1;     // 17
+    uint32_t REN18 : 1;     // 18
+    uint32_t REN19 : 1;     // 19
+    uint32_t REN20 : 1;     // 20
+    uint32_t REN21 : 1;     // 21
+    uint32_t REN22 : 1;     // 22
+    uint32_t REN23 : 1;     // 23
+    uint32_t REN24 : 1;     // 24
+    uint32_t REN25 : 1;     // 25
+    uint32_t REN26 : 1;     // 26
+    uint32_t REN27 : 1;     // 27
+    uint32_t REN28 : 1;     // 28
+    uint32_t REN29 : 1;     // 29
+    uint32_t REN30 : 1;     // 30
+    uint32_t REN31 : 1;     // 31
+    uint32_t reserved : 20; // 31:12
+  } bits;
+} GPREN0_t;
+
+typedef union GPREN1_t {
+  uint32_t all;
+  struct {
+    uint32_t REN32 : 1;     // 0
+    uint32_t REN33 : 1;     // 1
+    uint32_t REN34 : 1;     // 2
+    uint32_t REN35 : 1;     // 3
+    uint32_t REN36 : 1;     // 4
+    uint32_t REN37 : 1;     // 5
+    uint32_t REN38 : 1;     // 6
+    uint32_t REN39 : 1;     // 7
+    uint32_t REN40 : 1;     // 8
+    uint32_t REN41 : 1;     // 9
+    uint32_t REN42 : 1;     // 10
+    uint32_t REN43 : 1;     // 11
+    uint32_t REN44 : 1;     // 12
+    uint32_t REN45 : 1;     // 13
+    uint32_t REN46 : 1;     // 14
+    uint32_t REN47 : 1;     // 15
+    uint32_t REN48 : 1;     // 16
+    uint32_t REN49 : 1;     // 17
+    uint32_t REN50 : 1;     // 18
+    uint32_t REN51 : 1;     // 19
+    uint32_t REN52 : 1;     // 20
+    uint32_t REN53 : 1;     // 21
+    uint32_t reserved : 10; // 31:22
+  } bits;
+} GPREN1_t;
+
+typedef union GPFEN0_t {
+  uint32_t all;
+  struct {
+    uint32_t FEN0 : 1;      // 0
+    uint32_t FEN1 : 1;      // 1
+    uint32_t FEN2 : 1;      // 2
+    uint32_t FEN3 : 1;      // 3
+    uint32_t FEN4 : 1;      // 4
+    uint32_t FEN5 : 1;      // 5
+    uint32_t FEN6 : 1;      // 6
+    uint32_t FEN7 : 1;      // 7
+    uint32_t FEN8 : 1;      // 8
+    uint32_t FEN9 : 1;      // 9
+    uint32_t FEN10 : 1;     // 10
+    uint32_t FEN11 : 1;     // 11
+    uint32_t FEN12 : 1;     // 12
+    uint32_t FEN13 : 1;     // 13
+    uint32_t FEN14 : 1;     // 14
+    uint32_t FEN15 : 1;     // 15
+    uint32_t FEN16 : 1;     // 16
+    uint32_t FEN17 : 1;     // 17
+    uint32_t FEN18 : 1;     // 18
+    uint32_t FEN19 : 1;     // 19
+    uint32_t FEN20 : 1;     // 20
+    uint32_t FEN21 : 1;     // 21
+    uint32_t FEN22 : 1;     // 22
+    uint32_t FEN23 : 1;     // 23
+    uint32_t FEN24 : 1;     // 24
+    uint32_t FEN25 : 1;     // 25
+    uint32_t FEN26 : 1;     // 26
+    uint32_t FEN27 : 1;     // 27
+    uint32_t FEN28 : 1;     // 28
+    uint32_t FEN29 : 1;     // 29
+    uint32_t FEN30 : 1;     // 30
+    uint32_t FEN31 : 1;     // 31
+    uint32_t reserved : 20; // 31:12
+  } bits;
+} GPFEN0_t;
+
+typedef union GPFEN1_t {
+  uint32_t all;
+  struct {
+    uint32_t FEN32 : 1;     // 0
+    uint32_t FEN33 : 1;     // 1
+    uint32_t FEN34 : 1;     // 2
+    uint32_t FEN35 : 1;     // 3
+    uint32_t FEN36 : 1;     // 4
+    uint32_t FEN37 : 1;     // 5
+    uint32_t FEN38 : 1;     // 6
+    uint32_t FEN39 : 1;     // 7
+    uint32_t FEN40 : 1;     // 8
+    uint32_t FEN41 : 1;     // 9
+    uint32_t FEN42 : 1;     // 10
+    uint32_t FEN43 : 1;     // 11
+    uint32_t FEN44 : 1;     // 12
+    uint32_t FEN45 : 1;     // 13
+    uint32_t FEN46 : 1;     // 14
+    uint32_t FEN47 : 1;     // 15
+    uint32_t FEN48 : 1;     // 16
+    uint32_t FEN49 : 1;     // 17
+    uint32_t FEN50 : 1;     // 18
+    uint32_t FEN51 : 1;     // 19
+    uint32_t FEN52 : 1;     // 20
+    uint32_t FEN53 : 1;     // 21
+    uint32_t reserved : 10; // 31:22
+  } bits;
+} GPFEN1_t;
+
+typedef union GPHEN0_t {
+  uint32_t all;
+  struct {
+    uint32_t HEN0 : 1;      // 0
+    uint32_t HEN1 : 1;      // 1
+    uint32_t HEN2 : 1;      // 2
+    uint32_t HEN3 : 1;      // 3
+    uint32_t HEN4 : 1;      // 4
+    uint32_t HEN5 : 1;      // 5
+    uint32_t HEN6 : 1;      // 6
+    uint32_t HEN7 : 1;      // 7
+    uint32_t HEN8 : 1;      // 8
+    uint32_t HEN9 : 1;      // 9
+    uint32_t HEN10 : 1;     // 10
+    uint32_t HEN11 : 1;     // 11
+    uint32_t HEN12 : 1;     // 12
+    uint32_t HEN13 : 1;     // 13
+    uint32_t HEN14 : 1;     // 14
+    uint32_t HEN15 : 1;     // 15
+    uint32_t HEN16 : 1;     // 16
+    uint32_t HEN17 : 1;     // 17
+    uint32_t HEN18 : 1;     // 18
+    uint32_t HEN19 : 1;     // 19
+    uint32_t HEN20 : 1;     // 20
+    uint32_t HEN21 : 1;     // 21
+    uint32_t HEN22 : 1;     // 22
+    uint32_t HEN23 : 1;     // 23
+    uint32_t HEN24 : 1;     // 24
+    uint32_t HEN25 : 1;     // 25
+    uint32_t HEN26 : 1;     // 26
+    uint32_t HEN27 : 1;     // 27
+    uint32_t HEN28 : 1;     // 28
+    uint32_t HEN29 : 1;     // 29
+    uint32_t HEN30 : 1;     // 30
+    uint32_t HEN31 : 1;     // 31
+    uint32_t reserved : 20; // 31:12
+  } bits;
+} GPHEN0_t;
+
+typedef union GPHEN1_t {
+  uint32_t all;
+  struct {
+    uint32_t HEN32 : 1;     // 0
+    uint32_t HEN33 : 1;     // 1
+    uint32_t HEN34 : 1;     // 2
+    uint32_t HEN35 : 1;     // 3
+    uint32_t HEN36 : 1;     // 4
+    uint32_t HEN37 : 1;     // 5
+    uint32_t HEN38 : 1;     // 6
+    uint32_t HEN39 : 1;     // 7
+    uint32_t HEN40 : 1;     // 8
+    uint32_t HEN41 : 1;     // 9
+    uint32_t HEN42 : 1;     // 10
+    uint32_t HEN43 : 1;     // 11
+    uint32_t HEN44 : 1;     // 12
+    uint32_t HEN45 : 1;     // 13
+    uint32_t HEN46 : 1;     // 14
+    uint32_t HEN47 : 1;     // 15
+    uint32_t HEN48 : 1;     // 16
+    uint32_t HEN49 : 1;     // 17
+    uint32_t HEN50 : 1;     // 18
+    uint32_t HEN51 : 1;     // 19
+    uint32_t HEN52 : 1;     // 20
+    uint32_t HEN53 : 1;     // 21
+    uint32_t reserved : 10; // 31:22
+  } bits;
+} GPHEN1_t;
+
+typedef union GPLEN0_t {
+  uint32_t all;
+  struct {
+    uint32_t LEN0 : 1;      // 0
+    uint32_t LEN1 : 1;      // 1
+    uint32_t LEN2 : 1;      // 2
+    uint32_t LEN3 : 1;      // 3
+    uint32_t LEN4 : 1;      // 4
+    uint32_t LEN5 : 1;      // 5
+    uint32_t LEN6 : 1;      // 6
+    uint32_t LEN7 : 1;      // 7
+    uint32_t LEN8 : 1;      // 8
+    uint32_t LEN9 : 1;      // 9
+    uint32_t LEN10 : 1;     // 10
+    uint32_t LEN11 : 1;     // 11
+    uint32_t LEN12 : 1;     // 12
+    uint32_t LEN13 : 1;     // 13
+    uint32_t LEN14 : 1;     // 14
+    uint32_t LEN15 : 1;     // 15
+    uint32_t LEN16 : 1;     // 16
+    uint32_t LEN17 : 1;     // 17
+    uint32_t LEN18 : 1;     // 18
+    uint32_t LEN19 : 1;     // 19
+    uint32_t LEN20 : 1;     // 20
+    uint32_t LEN21 : 1;     // 21
+    uint32_t LEN22 : 1;     // 22
+    uint32_t LEN23 : 1;     // 23
+    uint32_t LEN24 : 1;     // 24
+    uint32_t LEN25 : 1;     // 25
+    uint32_t LEN26 : 1;     // 26
+    uint32_t LEN27 : 1;     // 27
+    uint32_t LEN28 : 1;     // 28
+    uint32_t LEN29 : 1;     // 29
+    uint32_t LEN30 : 1;     // 30
+    uint32_t LEN31 : 1;     // 31
+    uint32_t reserved : 20; // 31:12
+  } bits;
+} GPLEN0_t;
+
+typedef union GPLEN1_t {
+  uint32_t all;
+  struct {
+    uint32_t LEN32 : 1;     // 0
+    uint32_t LEN33 : 1;     // 1
+    uint32_t LEN34 : 1;     // 2
+    uint32_t LEN35 : 1;     // 3
+    uint32_t LEN36 : 1;     // 4
+    uint32_t LEN37 : 1;     // 5
+    uint32_t LEN38 : 1;     // 6
+    uint32_t LEN39 : 1;     // 7
+    uint32_t LEN40 : 1;     // 8
+    uint32_t LEN41 : 1;     // 9
+    uint32_t LEN42 : 1;     // 10
+    uint32_t LEN43 : 1;     // 11
+    uint32_t LEN44 : 1;     // 12
+    uint32_t LEN45 : 1;     // 13
+    uint32_t LEN46 : 1;     // 14
+    uint32_t LEN47 : 1;     // 15
+    uint32_t LEN48 : 1;     // 16
+    uint32_t LEN49 : 1;     // 17
+    uint32_t LEN50 : 1;     // 18
+    uint32_t LEN51 : 1;     // 19
+    uint32_t LEN52 : 1;     // 20
+    uint32_t LEN53 : 1;     // 21
+    uint32_t reserved : 10; // 31:22
+  } bits;
+} GPLEN1_t;
+
+typedef union GPAREN0_t {
+  uint32_t all;
+  struct {
+    uint32_t AREN0 : 1;      // 0
+    uint32_t AREN1 : 1;      // 1
+    uint32_t AREN2 : 1;      // 2
+    uint32_t AREN3 : 1;      // 3
+    uint32_t AREN4 : 1;      // 4
+    uint32_t AREN5 : 1;      // 5
+    uint32_t AREN6 : 1;      // 6
+    uint32_t AREN7 : 1;      // 7
+    uint32_t AREN8 : 1;      // 8
+    uint32_t AREN9 : 1;      // 9
+    uint32_t AREN10 : 1;     // 10
+    uint32_t AREN11 : 1;     // 11
+    uint32_t AREN12 : 1;     // 12
+    uint32_t AREN13 : 1;     // 13
+    uint32_t AREN14 : 1;     // 14
+    uint32_t AREN15 : 1;     // 15
+    uint32_t AREN16 : 1;     // 16
+    uint32_t AREN17 : 1;     // 17
+    uint32_t AREN18 : 1;     // 18
+    uint32_t AREN19 : 1;     // 19
+    uint32_t AREN20 : 1;     // 20
+    uint32_t AREN21 : 1;     // 21
+    uint32_t AREN22 : 1;     // 22
+    uint32_t AREN23 : 1;     // 23
+    uint32_t AREN24 : 1;     // 24
+    uint32_t AREN25 : 1;     // 25
+    uint32_t AREN26 : 1;     // 26
+    uint32_t AREN27 : 1;     // 27
+    uint32_t AREN28 : 1;     // 28
+    uint32_t AREN29 : 1;     // 29
+    uint32_t AREN30 : 1;     // 30
+    uint32_t AREN31 : 1;     // 31
+    uint32_t reserved : 20; // 31:12
+  } bits;
+} GPAREN0_t;
+
+typedef union GPAREN1_t {
+  uint32_t all;
+  struct {
+    uint32_t AREN32 : 1;     // 0
+    uint32_t AREN33 : 1;     // 1
+    uint32_t AREN34 : 1;     // 2
+    uint32_t AREN35 : 1;     // 3
+    uint32_t AREN36 : 1;     // 4
+    uint32_t AREN37 : 1;     // 5
+    uint32_t AREN38 : 1;     // 6
+    uint32_t AREN39 : 1;     // 7
+    uint32_t AREN40 : 1;     // 8
+    uint32_t AREN41 : 1;     // 9
+    uint32_t AREN42 : 1;     // 10
+    uint32_t AREN43 : 1;     // 11
+    uint32_t AREN44 : 1;     // 12
+    uint32_t AREN45 : 1;     // 13
+    uint32_t AREN46 : 1;     // 14
+    uint32_t AREN47 : 1;     // 15
+    uint32_t AREN48 : 1;     // 16
+    uint32_t AREN49 : 1;     // 17
+    uint32_t AREN50 : 1;     // 18
+    uint32_t AREN51 : 1;     // 19
+    uint32_t AREN52 : 1;     // 20
+    uint32_t AREN53 : 1;     // 21
+    uint32_t reserved : 10; // 31:22
+  } bits;
+} GPAREN1_t;
+
+typedef union GPAFEN0_t {
+  uint32_t all;
+  struct {
+    uint32_t AFEN0 : 1;      // 0
+    uint32_t AFEN1 : 1;      // 1
+    uint32_t AFEN2 : 1;      // 2
+    uint32_t AFEN3 : 1;      // 3
+    uint32_t AFEN4 : 1;      // 4
+    uint32_t AFEN5 : 1;      // 5
+    uint32_t AFEN6 : 1;      // 6
+    uint32_t AFEN7 : 1;      // 7
+    uint32_t AFEN8 : 1;      // 8
+    uint32_t AFEN9 : 1;      // 9
+    uint32_t AFEN10 : 1;     // 10
+    uint32_t AFEN11 : 1;     // 11
+    uint32_t AFEN12 : 1;     // 12
+    uint32_t AFEN13 : 1;     // 13
+    uint32_t AFEN14 : 1;     // 14
+    uint32_t AFEN15 : 1;     // 15
+    uint32_t AFEN16 : 1;     // 16
+    uint32_t AFEN17 : 1;     // 17
+    uint32_t AFEN18 : 1;     // 18
+    uint32_t AFEN19 : 1;     // 19
+    uint32_t AFEN20 : 1;     // 20
+    uint32_t AFEN21 : 1;     // 21
+    uint32_t AFEN22 : 1;     // 22
+    uint32_t AFEN23 : 1;     // 23
+    uint32_t AFEN24 : 1;     // 24
+    uint32_t AFEN25 : 1;     // 25
+    uint32_t AFEN26 : 1;     // 26
+    uint32_t AFEN27 : 1;     // 27
+    uint32_t AFEN28 : 1;     // 28
+    uint32_t AFEN29 : 1;     // 29
+    uint32_t AFEN30 : 1;     // 30
+    uint32_t AFEN31 : 1;     // 31
+    uint32_t reserved : 20; // 31:12
+  } bits;
+} GPAFEN0_t;
+
+typedef union GPAFEN1_t {
+  uint32_t all;
+  struct {
+    uint32_t AFEN32 : 1;     // 0
+    uint32_t AFEN33 : 1;     // 1
+    uint32_t AFEN34 : 1;     // 2
+    uint32_t AFEN35 : 1;     // 3
+    uint32_t AFEN36 : 1;     // 4
+    uint32_t AFEN37 : 1;     // 5
+    uint32_t AFEN38 : 1;     // 6
+    uint32_t AFEN39 : 1;     // 7
+    uint32_t AFEN40 : 1;     // 8
+    uint32_t AFEN41 : 1;     // 9
+    uint32_t AFEN42 : 1;     // 10
+    uint32_t AFEN43 : 1;     // 11
+    uint32_t AFEN44 : 1;     // 12
+    uint32_t AFEN45 : 1;     // 13
+    uint32_t AFEN46 : 1;     // 14
+    uint32_t AFEN47 : 1;     // 15
+    uint32_t AFEN48 : 1;     // 16
+    uint32_t AFEN49 : 1;     // 17
+    uint32_t AFEN50 : 1;     // 18
+    uint32_t AFEN51 : 1;     // 19
+    uint32_t AFEN52 : 1;     // 20
+    uint32_t AFEN53 : 1;     // 21
+    uint32_t reserved : 10; // 31:22
+  } bits;
+} GPAFEN1_t;
+
+typedef union GPPUD_t {
+  uint32_t all;
+  struct {
+    uint32_t PUD : 2;       // 1:0
+    uint32_t reserved : 30; // 31:2
+  } bits;
+} GPPUD_t;
+
+typedef union GPPUDCLK0_t {
+  uint32_t all;
+  struct {
+    uint32_t PUDCLK0 : 1;      // 0
+    uint32_t PUDCLK1 : 1;      // 1
+    uint32_t PUDCLK2 : 1;      // 2
+    uint32_t PUDCLK3 : 1;      // 3
+    uint32_t PUDCLK4 : 1;      // 4
+    uint32_t PUDCLK5 : 1;      // 5
+    uint32_t PUDCLK6 : 1;      // 6
+    uint32_t PUDCLK7 : 1;      // 7
+    uint32_t PUDCLK8 : 1;      // 8
+    uint32_t PUDCLK9 : 1;      // 9
+    uint32_t PUDCLK10 : 1;     // 10
+    uint32_t PUDCLK11 : 1;     // 11
+    uint32_t PUDCLK12 : 1;     // 12
+    uint32_t PUDCLK13 : 1;     // 13
+    uint32_t PUDCLK14 : 1;     // 14
+    uint32_t PUDCLK15 : 1;     // 15
+    uint32_t PUDCLK16 : 1;     // 16
+    uint32_t PUDCLK17 : 1;     // 17
+    uint32_t PUDCLK18 : 1;     // 18
+    uint32_t PUDCLK19 : 1;     // 19
+    uint32_t PUDCLK20 : 1;     // 20
+    uint32_t PUDCLK21 : 1;     // 21
+    uint32_t PUDCLK22 : 1;     // 22
+    uint32_t PUDCLK23 : 1;     // 23
+    uint32_t PUDCLK24 : 1;     // 24
+    uint32_t PUDCLK25 : 1;     // 25
+    uint32_t PUDCLK26 : 1;     // 26
+    uint32_t PUDCLK27 : 1;     // 27
+    uint32_t PUDCLK28 : 1;     // 28
+    uint32_t PUDCLK29 : 1;     // 29
+    uint32_t PUDCLK30 : 1;     // 30
+    uint32_t PUDCLK31 : 1;     // 31
+    uint32_t reserved : 20; // 31:12
+  } bits;
+} GPPUDCLK0_t;
+
+typedef union GPPUDCLK1_t {
+  uint32_t all;
+  struct {
+    uint32_t PUDCLK32 : 1;     // 0
+    uint32_t PUDCLK33 : 1;     // 1
+    uint32_t PUDCLK34 : 1;     // 2
+    uint32_t PUDCLK35 : 1;     // 3
+    uint32_t PUDCLK36 : 1;     // 4
+    uint32_t PUDCLK37 : 1;     // 5
+    uint32_t PUDCLK38 : 1;     // 6
+    uint32_t PUDCLK39 : 1;     // 7
+    uint32_t PUDCLK40 : 1;     // 8
+    uint32_t PUDCLK41 : 1;     // 9
+    uint32_t PUDCLK42 : 1;     // 10
+    uint32_t PUDCLK43 : 1;     // 11
+    uint32_t PUDCLK44 : 1;     // 12
+    uint32_t PUDCLK45 : 1;     // 13
+    uint32_t PUDCLK46 : 1;     // 14
+    uint32_t PUDCLK47 : 1;     // 15
+    uint32_t PUDCLK48 : 1;     // 16
+    uint32_t PUDCLK49 : 1;     // 17
+    uint32_t PUDCLK50 : 1;     // 18
+    uint32_t PUDCLK51 : 1;     // 19
+    uint32_t PUDCLK52 : 1;     // 20
+    uint32_t PUDCLK53 : 1;     // 21
+    uint32_t reserved : 10; // 31:22
+  } bits;
+} GPPUDCLK1_t;
+
+typedef struct GPIO_t {
+  GPFSEL0_t gpfsel0;     // 0x000
+  GPFSEL1_t gpfsel1;     // 0x004
+  GPFSEL2_t gpfsel2;     // 0x008
+  GPFSEL3_t gpfsel3;     // 0x00C
+  GPFSEL4_t gpfsel4;     // 0x010
+  GPFSEL5_t gpfsel5;     // 0x014
+  uint32_t reserved0;    // 0x018
+  GPSET0_t gpset0;       // 0x01C
+  GPSET1_t gpset1;       // 0x020
+  uint32_t reserved1;    // 0x024
+  GPCLR0_t gpclr0;       // 0x028
+  GPCLR1_t gpclr1;       // 0x02C
+  uint32_t reserved2;    // 0x030
+  GPLEV0_t gplev0;       // 0x034
+  GPLEV1_t gplev1;       // 0x038
+  uint32_t reserved3;    // 0x03c
+  GPEDS0_t gpeds0;       // 0x040
+  GPEDS1_t gpeds1;       // 0x044
+  uint32_t reserved4;    // 0x048
+  GPREN0_t gpren0;       // 0x04c
+  GPREN1_t gpren1;       // 0x050
+  uint32_t reserved5;    // 0x054
+  GPFEN0_t gpfen0;       // 0x058
+  GPFEN1_t gpfen1;       // 0x05c
+  uint32_t reserved6;    // 0x060
+  GPHEN0_t gphen0;       // 0x064
+  GPHEN1_t gphen1;       // 0x068
+  uint32_t reserved7;    // 0x06c
+  GPLEN0_t gplen0;       // 0x070
+  GPLEN1_t gplen1;       // 0x074
+  uint32_t reserved8;    // 0x078
+  GPAREN0_t gparen0;     // 0x07c
+  GPAREN1_t gparen1;     // 0x080
+  uint32_t reserved9;    // 0x084
+  GPAFEN0_t gpafen0;     // 0x088
+  GPAFEN1_t gpafen1;     // 0x08c
+  uint32_t reserved10;   // 0x090
+  GPPUD_t gppud;         // 0x094
+  GPPUDCLK0_t gppudclk0; // 0x098
+  GPPUDCLK1_t gppudclk1; // 0x09c
+} GPIO_t;
+
+/* 0x3F200000 for Raspberry Pi 2 & 3, 0x20200000 for Raspberry Zero */
+#define GPIO_BASE_ADDRESS0 0x20200000 
+
+#endif /* HAL_RPI_ZERO_GPIO_H_ */
