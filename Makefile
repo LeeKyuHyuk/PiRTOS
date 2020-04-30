@@ -38,10 +38,10 @@ clean:
 	@rm -fr build
 
 run: $(pirtos)
-	qemu-system-arm -M raspi2 -kernel $(pirtos) -serial null -serial stdio
+	qemu-system-arm -M raspi2 -kernel $(pirtos) -serial stdio
 
 debug: $(pirtos)
-	qemu-system-arm -M raspi2 -kernel $(pirtos) -serial null -serial stdio -S -gdb tcp::1234,ipv4
+	qemu-system-arm -M raspi2 -kernel $(pirtos) -serial stdio -S -gdb tcp::8080,ipv4
 
 gdb:
 	arm-none-eabi-gdb

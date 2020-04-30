@@ -1,6 +1,0 @@
-#ifndef HAL_RPI_2_BCM2836_H_
-#define HAL_RPI_2_BCM2836_H_
-
-#define MMIO_BASE 0x3F000000
-
-#endif /* HAL_RPI_2_BCM2836_H_ */

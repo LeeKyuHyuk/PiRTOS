@@ -1,17 +1,17 @@
 #include "HalUart.h"
 
+static void Hw_init(void);
+
 void main(void)
 {
-  // UART 초기화
-  uart_init();
+  Hw_init();
 
-  // "Hello World!"를 UART로 출력
-  uart_puts("Hello PiRTOS!\n");
-  uart_puts("Raspberry Pi Zero UART\n");
+  unsigned int i = 100;
+  while (i--)
+    Hal_uart_put_char('A');
+}
 
-  // UART 입력되는 것을 UART로 출력 (Echo 기능)
-  while (1)
-  {
-    uart_send(uart_getc());
-  }
+static void Hw_init(void)
+{
+  Hal_uart_init();
 }
