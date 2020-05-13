@@ -66,3 +66,17 @@ void Hal_uart_put_char(unsigned char ch)
     /* write the character to the buffer */
     *UART0_DR = ch;
 }
+
+unsigned char Hal_uart_get_char(void)
+{
+    char r;
+    /* 버퍼에 무언가가 올 때까지 기다립니다 */
+    do
+    {
+        asm volatile("nop");
+    } while (*UART0_FR & 0x10);
+    /* 버퍼를 읽고 반환합니다 */
+    r = (char)(*UART0_DR);
+    /* 캐리지 리턴을 개행 문자로 변환합니다 */
+    return r == '\r' ? '\n' : r;
+}
